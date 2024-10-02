@@ -1,8 +1,9 @@
 // This needs to be changed in order to point towards the proper API
-var API = 'https://4rtm.com/api/';
+//var API = 'https://4rtm.com/api/';
+var API = 'http://178.203.251.106:31337/api/v2/';
 
 // This value can be entered as null whenever the API points to the proper JSON by default
-var current = 'Raptoreum-TESTNET';
+var current = '';
 
     // Function used to format statistics depending on size of variable
     function formatSymbol(value, decimal, unit) {
