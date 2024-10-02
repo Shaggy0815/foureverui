@@ -102,7 +102,8 @@ var current = 'Pool-Anokas';
 
     // Function used to load all miner statistics and create graph
     function loadMinerStatistics(miner) {
-			$.ajax(API + 'pools/' + current + '/miners/' + miner)
+			//$.ajax(API + 'pools/' + current + '/miners/' + miner)
+			$.ajax(API + 'v2/' + current + '/miners/' + miner)
             .done(function (data) {
                 var workerHashRate = 0;
                 var workerSharesRate = 0;
