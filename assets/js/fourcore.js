@@ -1,9 +1,9 @@
 // This needs to be changed in order to point towards the proper API
 //var API = 'https://4rtm.com/api/';
-var API = 'http://178.203.251.106:31337/api/';
+var API = 'https://pool.anokas.tech/api/v2/Pool-Anokas/';
 
 // This value can be entered as null whenever the API points to the proper JSON by default
-var current = 'Pool-Anokas';
+var current = '';
 
     // Function used to format statistics depending on size of variable
     function formatSymbol(value, decimal, unit) {
@@ -33,7 +33,7 @@ var current = 'Pool-Anokas';
     // Function used to load general statistics
     function loadStatistics() {
 	//return $.ajax(API + 'pools')
-        return $.ajax(API + 'v2')
+        return $.ajax(API)
             .done(function (data) {
                 $.each(data.pools, function (index, value) {
                     $('#workers').text(formatSymbol(value.poolStats.connectedMiners, 0, ''));
